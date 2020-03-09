@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="@color/contentDividerLine">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="16dp"
+        android:text="Foldable Item"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        folding-cell:layout_constraintEnd_toEndOf="parent"
+        folding-cell:layout_constraintStart_toStartOf="parent"
+        folding-cell:layout_constraintTop_toTopOf="parent" />
+
+    <com.ramotion.foldingcell.FoldingCell
+        android:id="@+id/folding_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        folding-cell:additionalFlipsCount="2"
+        folding-cell:animationDuration="1300"
+        folding-cell:backSideColor="@color/bgBackSideColor"
+        folding-cell:cameraHeight="30"
+        folding-cell:layout_constraintEnd_toEndOf="parent"
+        folding-cell:layout_constraintStart_toStartOf="parent"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <!-- CONTENT (UNFOLDED) LAYOUT (MUST BE AT LEAST 2x times BIGGER than content layout bellow)-->
+        <include layout="@layout/cell_content_layout" />
+
+        <!-- TITLE (FOLDED) LAYOUT (MUST BE AT LEAST 2x times SMALLER than content layout above) -->
+        <include layout="@layout/cell_title_layout" />
+
+    </com.ramotion.foldingcell.FoldingCell>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
