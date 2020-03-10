@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.PaperOnboardingActivity"></activity>
+        <activity android:name=".activity.ExpandingCollActivity"/>
+        <activity android:name=".activity.PaperOnboardingActivity" />
         <activity android:name=".activity.FoldingCellAcivity" />
         <activity android:name=".activity.SpaceTabsActivity" />
         <activity android:name=".activity.ShimmerActivity" />

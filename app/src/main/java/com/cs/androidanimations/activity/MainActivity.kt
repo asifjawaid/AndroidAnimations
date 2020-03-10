@@ -33,5 +33,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        expand_coll.setOnClickListener {
+            val intent = Intent(this@MainActivity, ExpandingCollActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
